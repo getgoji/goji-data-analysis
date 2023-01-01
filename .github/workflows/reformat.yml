@@ -1,4 +1,4 @@
-name: Reformat and Lint
+name: Reformat
 
 on:
   pull_request:
@@ -6,11 +6,11 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: "reformat-and-lint"
+  group: "reformat"
   cancel-in-progress: true
 
 jobs:
-  reformat-and-lint:
+  reformat:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,22 +19,19 @@ jobs:
         with:
           token: ${{ secrets.WORKFLOW_COMMIT }}
 
-      - name: 📦 Setup Node.js and caching
-        uses: actions/setup-node@v3
+      - name: 📦 Setup Python
+        uses: actions/setup-node@v4
         with:
-          node-version: 19
-          cache: "npm"
+          pythonn-version: '3.11'
+          cache: 'pip'
 
       - name: 🔨 Install
-        run: npm i
+        run: pip install -r requirements.txt
 
       - name: 🧹 Reformat
-        run: npx prettier --write .
-
-      - name: 🚨 Lint
-        run: npx eslint .
+        run: black .
 
       - name: ⬆️ Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Reformat and Lint
+          commit_message: Reformat
