@@ -5,7 +5,7 @@ Thanks for interest in supporting the development of the Goji data analysis note
 ## What's good to contribute
 
 - Reporting bugs is the best way to contribute.
-- Reporting new data sources or companies.
+- Reporting new data sources or companies (describe the addition through a feature request).
 - Fixing bugs you find or any of the open [issues](https://github.com/getgoji/goji-data-analysis/issues)
 - Performance improvements are always welcome.
 
