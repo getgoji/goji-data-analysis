@@ -28,8 +28,11 @@ jobs:
       - name: 🔨 Install
         run: pip install -r requirements.txt
 
-      - name: 🧹 Reformat
+      - name: 🧹 Reformat python
         run: black .
+      
+      - name: 🧹 Reformat markdown
+        run: mdformat .
 
       - name: ⬆️ Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
