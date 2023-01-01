@@ -20,9 +20,9 @@ jobs:
           token: ${{ secrets.WORKFLOW_COMMIT }}
 
       - name: 📦 Setup Python
-        uses: actions/setup-node@v4
+        uses: actions/setup-python@v4
         with:
-          pythonn-version: '3.11'
+          python-version: '3.11'
           cache: 'pip'
 
       - name: 🔨 Install
