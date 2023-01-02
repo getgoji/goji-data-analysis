@@ -7,7 +7,7 @@ decorator==5.1.1
 executing==1.2.0
 ipython==8.7.0
 jedi==0.18.2
-linkify-it-py==1.0.3
+linkify-it-py==2.0.0
 markdown-it-py==2.1.0
 matplotlib-inline==0.1.6
 mdformat==0.7.16
