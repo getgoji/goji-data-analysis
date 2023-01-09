@@ -28,6 +28,6 @@ Pygments==2.14.0
 six==1.16.0
 stack-data==0.6.2
 tokenize-rt==5.0.0
-traitlets==5.8.0
+traitlets==5.8.1
 uc-micro-py==1.0.1
 wcwidth==0.2.5
