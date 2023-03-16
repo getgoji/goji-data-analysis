@@ -2,15 +2,12 @@ name: Reformat
 
 on:
   pull_request:
-
+  merge_group:
   workflow_dispatch:
-
-concurrency:
-  group: "reformat"
-  cancel-in-progress: true
 
 jobs:
   reformat:
+    if: github.event.pull_request.user.login != 'dependabot[bot]'
     runs-on: ubuntu-latest
 
     steps:
