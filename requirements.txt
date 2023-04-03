@@ -14,7 +14,7 @@ jedi==0.18.2
 jupyter_client==7.4.8
 jupyter_core==5.3.0
 linkify-it-py==1.0.3
-markdown-it-py==2.1.0
+markdown-it-py==2.2.0
 matplotlib-inline==0.1.6
 mdformat==0.7.16
 mdformat-gfm==0.3.5
