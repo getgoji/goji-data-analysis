@@ -10,7 +10,7 @@ on:
 
 jobs:
   reformat:
-    if: github.event.pull_request.user.login != 'dependabot[bot]'
+    if: github.actor != 'dependabot[bot]'
     runs-on: ubuntu-latest
 
     steps:
@@ -35,6 +35,7 @@ jobs:
         run: mdformat README.md
 
       - name: ⬆️ Commit changes
+        if: github.ref != 'refs/heads/main'
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Reformat
